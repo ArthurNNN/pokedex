@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 
 const CaughtPokemon = (props) => {
 
-    const listAll = ["Bulbasaur", "Ivysaur", "Venusaur", "Charmander", "Charizard", "Squirtle",
+    const pokemonsList = ["Bulbasaur", "Ivysaur", "Venusaur", "Charmander", "Charizard", "Squirtle",
         "Wartortle", "Charmeleon", "Blastoise", "Caterpie", "Metapod", "Butterfree", "Weedle",
         "Kakuna", "Beedrill", "Pidgey", "Pidgeotto", "Pidgeot", "Rattata", "Raticate"];
+        
     var [caught, setCaught] = useState([]);
-
+    
     const catchPokemon = () => {
-        setCaught(caught.concat(listAll[Math.floor(Math.random() * listAll.length)]));
+        setCaught(caught.concat(pokemonsList[Math.floor(Math.random() * pokemonsList.length)]));
         console.log(caught);
     }
 
