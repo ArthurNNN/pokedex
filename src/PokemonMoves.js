@@ -14,20 +14,20 @@ function PokemonMoves(props) {
             });
     }, [props.pokemonId]);
 
-    if (pokemonData) {
-        return (
-          <div>
-            <p>{pokemonData.name}'s moves:</p>
-            <ul>
-              {pokemonData.moves.map((move, index) => {
-                return <li key={index}>{move.move.name}</li>;
-              })}
-            </ul>
-          </div>
-        );
-      } else {
-        return null;
-      }
+  if (pokemonData) {
+    return (
+      <div>
+        <p>{pokemonData.name}'s moves:</p>
+        <ul>
+          {pokemonData.moves.map((move, index) => {
+            return <li key={index}>{move.move.name}</li>;
+          })}
+        </ul>
+      </div>
+    );
+  } else {
+    return null;
+  }
 }
 
 export default PokemonMoves;

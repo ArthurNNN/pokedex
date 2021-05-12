@@ -13,11 +13,9 @@ const CaughtPokemon = (props) => {
         // setCaught(caught.concat(pokemonsList[Math.floor(Math.random() * pokemonsList.length)]));
 
         if (pokemonNameInput !== "") {
-
             setCaught(caught.concat(pokemonNameInput));
             setPokemonNameInput("");
             console.log(caught);
-
         }
 
     }
